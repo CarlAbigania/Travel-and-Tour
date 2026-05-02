@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/spots.css">
+    <title>Enchanted Kingdom - Travel and Tour</title>
+</head>
+<body class="spot-page">
+    <header>
+        <nav>
+            <h4>TRAVEL AND TOUR – CITY OF CABUYAO</h4>
+            <ul id="menu_bx">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#special-deals">Special Deals</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="javascript:void(0)" onclick="showLogin()">Log-In</a></li>
+                <li><a href="javascript:void(0)" onclick="showRegister()">Register</a></li>
+            </ul>
+            <i class="bi bi-three-dots"></i>
+        </nav>
+    </header>
+
+    <main>
+        <a href="../index.html" class="back-btn"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        <section class="spot-hero">
+            <img src="../assets/images/ek-hero.png" alt="Enchanted Kingdom" id="spotImage">
+        </section>
+
+        <section class="spot-content">
+            <div class="spot-card">
+                <h1><mark>Enchanted Kingdom</mark></h1>
+                <p>Enchanted Kingdom is a place where fantasy comes to life amidst the vibrant hues of magic and wonder. Nestled in a lush landscape, it beckons adventurers of all ages with promises of thrilling rides and enchanting experiences. From the moment you step through its gates, you are transported into a realm where imagination knows no bounds.</p>
+                <p>The park's towering roller coasters soar into the sky, their twists and turns promising adrenaline-pumping excitement. Screams of delight mingle with the joyful laughter of families exploring themed zones that range from medieval castles to futuristic realms. Each corner holds surprises — whether encountering whimsical characters strolling through the streets or discovering hidden treasures in themed shops.</p>
+                <p>As the sun sets, the park transforms into a twinkling wonderland, with lights illuminating the night sky and casting a spell of enchantment over all who visit. Enchanted Kingdom truly lives up to its name, leaving visitors with memories that sparkle like fairy dust long after they've returned to the everyday world.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Subscribe & <br> get special discount</h2>
+        <p>Avail subscription to our website to gain benefits like travel and food discounts on your next purchase and bookings</p>
+        <div class="input">
+            <input type="text" placeholder="Enter your Email Address">
+            <button>Subscribe</button>
+        </div>
+        <ul>
+            <li><i class="bi bi-clock-history"></i> <span class="stat-num">2</span> <h6>Years Serving the travel industry</h6></li>
+            <li><i class="bi bi-globe-americas"></i> <span class="stat-num">500</span> <h6>Global <br> Partnership</h6></li>
+            <li><i class="bi bi-trophy"></i> <span class="stat-num">250</span> <h6>Industry Awards since 2023</h6></li>
+            <li><i class="bi bi-people"></i> <span class="stat-num">3425</span> <h6>Subscribers</h6></li>
+        </ul>
+        <p style="margin-top: 20px; font-size: 11px;">&copy; 2024 Travel and Tourism Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModals()">&times;</span>
+            <form class="auth-form" onsubmit="return false;">
+                <h2>Log-In</h2>
+                <div class="input-group">
+                    <label for="modal-username">User Name</label>
+                    <input type="text" id="modal-username" placeholder="Enter username" required>
+                </div>
+                <div class="input-group">
+                    <label for="modal-password">Password</label>
+                    <input type="password" id="modal-password" placeholder="Enter password" required>
+                </div>
+                <button type="button" class="btn-submit" onclick="validateLogin()">Login</button>
+                <p class="switch-text">Don't have an account? <a href="javascript:void(0)" onclick="showRegister()">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="modal-close" onclick="closeModals()">&times;</span>
+            <form class="auth-form" onsubmit="return validateRegister(event)">
+                <h2>Register</h2>
+                <div class="input-group">
+                    <label for="reg-name">Full Name</label>
+                    <input type="text" id="reg-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="reg-username">Username</label>
+                        <input type="text" id="reg-username" placeholder="Pick a username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" placeholder="Create password" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="reg-address">Address</label>
+                    <input type="text" id="reg-address" placeholder="Enter your address" required>
+                </div>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="reg-birthday">Birthday</label>
+                        <input type="date" id="reg-birthday" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-contact">Contact Number</label>
+                        <input type="text" id="reg-contact" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Create Account</button>
+                <p class="switch-text">Already have an account? <a href="javascript:void(0)" onclick="showLogin()">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/zoom.js"></script>
+</body>
+</html>

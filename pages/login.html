@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <title>Log-In - Travel and Tour</title>
+</head>
+<body class="auth-page">
+    <header style="height: auto; padding-bottom: 10px;">
+        <nav>
+            <h4>TRAVEL AND TOUR – CITY OF CABUYAO</h4>
+            <ul id="menu_bx">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#scoll-section">Special Deals</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="login.html">Log-In</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+            <i class="bi bi-three-dots"></i>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-card">
+            <h2>Log-In</h2>
+            <form class="auth-form" id="form_id" method="post" name="myform">
+                <div class="input-group">
+                    <label for="username">User Name</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username"/>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter password"/>
+                </div>
+                <button type="button" class="btn-submit" id="submit" onclick="validate()">Login</button>
+            </form>
+            <p class="switch-text">Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Subscribe & <br> get special discount</h2>
+        <p>Avail subscription to our website to gain benefits like travel and food discounts on your next purchase and bookings</p>
+        <div class="input">
+            <input type="text" placeholder="Enter your Email Address">
+            <button>Subscribe</button>
+        </div>
+        <ul>
+            <li>2 <br> <h6>Years Serving the travel industry</h6></li>
+            <li>500 <br> <h6>Global <br> Partnership</h6></li>
+            <li>250 <br> <h6>Industry Awards since 2023</h6></li>
+            <li>3425 <br> <h6>Subscribe</h6></li>
+        </ul>
+        <p style="margin-top: 20px; font-size: 11px;">&copy; 2024 Travel and Tourism Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "Cravenggo05" && password === "Secret") {
+                window.location.href = "../index.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>

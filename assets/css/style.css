@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* *{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} */
+}
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -12,14 +12,16 @@ body{
 
 header{
     width: 80%;
-    height: 95vh;
-    /* border: 1px solid #000; */
     margin: auto;
+}
+
+header.home-header{
+    height: 95vh;
 }
 
 header nav{
     width: 95%;
-    height: 7%;
+    height: 80px;
     /* border: 1px solid #000; */
     margin: auto;
     display: flex;
@@ -54,9 +56,9 @@ header nav ul li a{
     transition: .3s linear;
 }
 
-header nav ul li a:hover{
+header nav ul li a:hover,
+header nav ul li a.active{
     color: gray;
-
 }
 
 header nav .bi-three-dots{
@@ -76,7 +78,7 @@ header .content::before{
     width: 100%;
     height: 80%;
     /* border: 1px solid #000; */
-    background: url('image/bg.png')no-repeat center center/cover;
+    background: url('../images/bg.png')no-repeat center center/cover;
     border-radius: 10px;
     z-index: -1;
 }
@@ -129,29 +131,34 @@ header .trip_bx .search_bx{
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%;
-    height: 60px;
+    width: 70%;
+    height: auto;
+    min-height: 70px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 10px 25px rgb(114, 114, 114);
-    z-index: 1;
-    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    padding: 15px 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header .trip_bx .search_bx .card{
-    width: 200px;
+    flex: 1;
     height: 100%;
-    /* border: 1px solid #000; */
-
+    padding: 0 10px;
 }
 
 header .trip_bx .search_bx .card h4{
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
     font-weight: 700;
+    color: #121213;
+    display: flex;
+    align-items: center;
 }
 
 header .trip_bx .search_bx .card h4 .bi{
@@ -162,11 +169,14 @@ header .trip_bx .search_bx .card h4 .bi{
 }
 
 header .trip_bx .search_bx .card input{
-    margin-top: 3px;
+    margin-top: 5px;
     padding: 5px 0px;
     border: none;
     outline: none;
-    font-size: 13px; 
+    font-size: 13px;
+    width: 100%;
+    background: transparent;
+    color: #555;
 }
 
 header .trip_bx .search_bx input[type="button"]{
@@ -283,41 +293,55 @@ header .trip_bx .travel_bx .cards .card .btn_city h5 span{
 }
 
 .offers{
-    width: 60%;
+    width: 80%;
     height: auto;
     /* border: 1px solid #000; */
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     transition: .5s linear;
 }
 
 .offers h1{
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     margin: 0;
+    font-size: 2.2rem;
+    color: #121213;
 }
 
 .offers p{
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
-    margin: 0;
+    margin: 10px 0 30px;
+    color: #555;
 }
 
 .offers .cards{
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
     /* border: 1px solid #000; */
     flex-wrap: wrap;
 }
 
 .offers .cards .card{
     position: relative;
-    width: 200px;
-    height: 350px;
+    width: 250px;
+    height: auto;
+    min-height: 400px;
     /* border: 1px solid #000; */
-    margin-top: 10px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.offers .cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .offers .cards .card h3{
@@ -448,76 +472,121 @@ header .trip_bx .travel_bx .cards .card .btn_city h5 span{
  footer{
     width: 100%;
     height: auto;
-    background: rgb(249, 249, 255);
-    margin-top: 20px;
+    background: #f8f9fa;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 50px 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
  }
 
  footer h2{
     text-align: center;
     margin: 0;
-    margin-top: 25px;
-    line-height: 30px;
-    font-weight: 600;
+    line-height: 1.2;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #121213;
+    letter-spacing: -0.5px;
  }
 
  footer p{
     text-align: center;
-    width: 400px;
-    font-size: 13px;
+    width: 100%;
+    max-width: 450px;
+    font-size: 14px;
+    color: #666;
+    margin: 15px 0 30px;
  }
 
  footer .input{
-    box-shadow: 0px 3px 20px -1px gray;
-    border-radius: 20px;
+    display: flex;
+    background: #fff;
+    padding: 6px;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(0,0,0,0.05);
  }
 
  footer .input input{
-    padding: 12px 15px;
+    flex: 1;
+    padding: 12px 20px;
     border: none;
     outline: none;
-    font-size: 12px;
-    border-radius: 20px 0px 0px 20px;
+    font-size: 13px;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
 }
 
 footer .input button{
-    padding: 12px 15px;
+    padding: 12px 25px;
     border: none;
     outline: none;
-    font-size: 12px;
-    border-radius: 0px 20px 20px 0px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 35px;
     background: #000;
     color: #fff;
     cursor: pointer;
-    transition: .3s linear;
+    transition: 0.3s;
 }
 
 footer .input button:hover{
-    background: gray;
+    background: #333;
+    transform: scale(1.05);
 }
 
 footer ul{
     list-style: none;
     display: flex;
-    /* align-items: center; */
-    margin-top: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 footer ul li{
     text-align: center;
-    margin-right: 30px;
-    font-weight: bold;
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul li i {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 12px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.04);
+}
+
+footer ul li .stat-num {
+    font-size: 22px;
+    font-weight: 800;
+    color: #121213;
+    margin-bottom: 3px;
 }
 
 footer ul li h6{
     font-size: 11px;
-    font-weight: 600;
-    max-width: 120px;
+    font-weight: 500;
+    color: #666;
     margin: 0;
-    line-height: 18px;
-    border-top: 1px solid #000;
-    padding-top: 3px;
+    line-height: 1.3;
+    max-width: 120px;
 }

@@ -1,16 +1,6 @@
-@media screen and (max-width:1485px){
-    .offers {
-        width: 65%;
-        
-    }
-}
 
-@media screen and (max-width:1373px){
-    .offers {
-        width: 72%;
-        
-    }
-}
+
+
 
 @media screen and (max-width:1250px){
     header {
@@ -94,14 +84,19 @@
 }
 
 @media screen and (max-width: 650px){
+    header .trip_bx .search_bx{
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+    }
     header .trip_bx .search_bx .card{
-        width: 140px;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0;
     }
     header .trip_bx .search_bx input[type="button"]{
-        position: absolute;
-        right: 10px;
-        bottom: -43px;
-        font-size: 13px;
+        width: 100%;
+        border-radius: 10px;
     }
     .offers{
         width: 85%;

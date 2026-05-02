@@ -1,0 +1,95 @@
+.spot-page {
+    background: #f8f9fa;
+}
+
+.spot-hero {
+    width: 75%;
+    margin: 10px auto;
+    height: 35vh;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.spot-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    cursor: zoom-in;
+}
+
+.spot-hero img.zoomed {
+    transform: scale(1.5);
+    cursor: zoom-out;
+}
+
+.spot-content {
+    width: 75%;
+    margin: -30px auto 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.spot-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.spot-card h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #121213;
+    letter-spacing: -0.5px;
+}
+
+.spot-card mark {
+    background: transparent;
+    color: inherit;
+}
+
+.spot-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    transition: 0.3s;
+    margin: 15px auto 10px;
+    margin-left: 12.5%;
+}
+
+.back-btn:hover {
+    background: #333;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .spot-hero, .spot-content {
+        width: 95%;
+    }
+    .spot-card {
+        padding: 30px;
+    }
+    .spot-card h1 {
+        font-size: 2rem;
+    }
+}
